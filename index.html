@@ -1,0 +1,764 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>رادوین هاشپور | طراحی سایت حرفه‌ای و سئو</title>
+  <meta name="description" content="وب‌سایت رسمی رادوین هاشپور؛ طراحی سایت مدرن، توسعه فرانت‌اند، طراحی سایت فروشگاهی و بهینه‌سازی سئو برای موتورهای جستجو.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="رادوین هاشپور">
+  <meta name="theme-color" content="#070b1d">
+  <meta name="color-scheme" content="dark">
+
+  <!-- پس از انتشار، آدرس واقعی سایت را جایگزین کنید -->
+  <!-- <link rel="canonical" href="https://YOUR-DOMAIN.example/"> -->
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fa_IR">
+  <meta property="og:title" content="رادوین هاشپور | طراح و توسعه‌دهنده وب">
+  <meta property="og:description" content="طراحی سایت مدرن، سریع، واکنش‌گرا و اصولی با تمرکز بر تجربه کاربری و سئو.">
+  <meta property="og:site_name" content="رادوین هاشپور">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='25' fill='%23070b1d'/%3E%3Ctext x='50' y='67' font-size='43' font-family='Arial' font-weight='bold' text-anchor='middle' fill='%2300d9ff'%3ERH%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "رادوین هاشپور",
+    "jobTitle": "طراح و توسعه‌دهنده وب",
+    "description": "طراحی وب‌سایت، توسعه فرانت‌اند و بهینه‌سازی فنی سئو",
+    "knowsAbout": [
+      "طراحی سایت",
+      "توسعه فرانت‌اند",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "بهینه‌سازی موتورهای جستجو"
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #070b1d;
+      --panel: #0c1229;
+      --text: #f5f7ff;
+      --muted: #aab5d1;
+      --cyan: #00d9ff;
+      --purple: #a333ff;
+      --border: rgba(111, 135, 255, .22);
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(ellipse at 15% 10%, #211044 0, transparent 35%),
+        radial-gradient(ellipse at 90% 45%, #081d43 0, transparent 32%),
+        var(--bg);
+      color: var(--text);
+      font-family: "Vazirmatn", Tahoma, sans-serif;
+      line-height: 1.9;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--cyan);
+      outline-offset: 5px;
+    }
+
+    .container {
+      width: min(1160px, 90%);
+      margin-inline: auto;
+    }
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(7, 11, 29, .86);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 900;
+      line-height: 1.5;
+    }
+
+    .logo {
+      display: grid;
+      place-items: center;
+      width: 49px;
+      height: 49px;
+      border-radius: 15px;
+      background: linear-gradient(135deg, var(--purple), #245bff, var(--cyan));
+      color: white;
+      font-size: 19px;
+      direction: ltr;
+    }
+
+    .brand small {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 400;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 27px;
+      align-items: center;
+      font-size: 14px;
+    }
+
+    .nav-links a {
+      color: #d6dcf2;
+      transition: color .2s;
+    }
+
+    .nav-links a:hover { color: var(--cyan); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 48px;
+      padding: 11px 22px;
+      border: 1px solid transparent;
+      border-radius: 13px;
+      cursor: pointer;
+      font-weight: 700;
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 35px #5732ff35;
+    }
+
+    .btn-primary {
+      background: linear-gradient(100deg, var(--purple), #315bff, #00bfe8);
+      color: white;
+    }
+
+    .btn-outline {
+      border-color: #4858a5;
+      background: rgba(8, 13, 35, .7);
+    }
+
+    .hero {
+      position: relative;
+      padding: 100px 0 86px;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 6px 14px;
+      border: 1px solid #4b3b91;
+      border-radius: 30px;
+      color: var(--cyan);
+      background: #17103380;
+      font-size: 13px;
+    }
+
+    h1 {
+      margin: 23px 0;
+      font-size: clamp(34px, 4.4vw, 58px);
+      line-height: 1.55;
+      font-weight: 900;
+      letter-spacing: -1.4px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, var(--cyan), #7b83ff, #d16aff);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 16px;
+      max-width: 600px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 13px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .visual {
+      min-height: 350px;
+      display: grid;
+      place-items: center;
+      position: relative;
+    }
+
+    .orb {
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #a333ff80, #00d9ff50);
+      filter: blur(75px);
+      opacity: .65;
+    }
+
+    .code-window {
+      position: relative;
+      width: 100%;
+      max-width: 460px;
+      padding: 20px;
+      border: 1px solid #5758c9;
+      border-radius: 23px;
+      background: linear-gradient(140deg, #141d40ee, #080d22f5);
+      box-shadow: 0 0 55px #5436ff25, 0 25px 80px #0007;
+      transform: perspective(900px) rotateY(-5deg);
+      animation: float 5s ease-in-out infinite;
+    }
+
+    .window-bar {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--purple);
+    }
+
+    .dot:nth-child(2) { background: #00d9ff; }
+    .dot:nth-child(3) { background: #7c88ff; }
+
+    .window-title {
+      margin-right: auto;
+      color: var(--muted);
+      font-size: 12px;
+      direction: ltr;
+    }
+
+    .code {
+      direction: ltr;
+      text-align: left;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      color: #c3d4ff;
+      font: 13px/2 monospace;
+    }
+
+    .code .c { color: #00d9ff; }
+    .code .p { color: #d16aff; }
+
+    .mini-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    .mini-stat {
+      text-align: center;
+      border: 1px solid var(--border);
+      background: #11183280;
+      border-radius: 13px;
+      padding: 12px 6px;
+    }
+
+    .mini-stat strong {
+      display: block;
+      color: var(--cyan);
+      font-size: 14px;
+    }
+
+    .mini-stat span {
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    section { padding: 78px 0; }
+
+    .section-head {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 42px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(26px, 3vw, 37px);
+      line-height: 1.5;
+      margin: 12px 0;
+    }
+
+    .section-head p { color: var(--muted); }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      padding: 27px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: linear-gradient(145deg, #121a35b8, #090e20e8);
+      transition: transform .25s, border-color .25s;
+    }
+
+    .card:hover {
+      transform: translateY(-7px);
+      border-color: #6557e8;
+    }
+
+    .icon {
+      width: 55px;
+      height: 55px;
+      display: grid;
+      place-items: center;
+      border-radius: 16px;
+      color: var(--cyan);
+      background: #172c4b;
+      font-size: 25px;
+    }
+
+    .card h3 { margin: 17px 0 8px; font-size: 19px; }
+    .card p { color: var(--muted); font-size: 14px; }
+
+    .card a {
+      color: var(--cyan);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .about-panel {
+      padding: 28px;
+      border-radius: 22px;
+      border: 1px solid var(--border);
+      background: linear-gradient(135deg, #181039, #0a1730);
+    }
+
+    .about-panel h3 { font-size: 25px; }
+    .about-panel p, .about-copy p { color: var(--muted); }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 20px;
+    }
+
+    .tag {
+      padding: 5px 12px;
+      font-size: 12px;
+      border: 1px solid #414c86;
+      border-radius: 30px;
+      color: #cbd7ff;
+    }
+
+    .project-card {
+      min-height: 220px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background:
+        radial-gradient(ellipse at 90% 10%, #4730a855, transparent 60%),
+        #0d142b;
+    }
+
+    .project-card .project-label {
+      color: var(--cyan);
+      font-size: 12px;
+    }
+
+    .contact-box {
+      text-align: center;
+      padding: 48px 25px;
+      border: 1px solid #4a429a;
+      border-radius: 24px;
+      background: radial-gradient(ellipse at top, #29205b, #0c1229 70%);
+    }
+
+    .contact-box h2 { font-size: 30px; }
+    .contact-box p { color: var(--muted); }
+
+    .footer {
+      padding: 28px 0;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer a { color: var(--cyan); }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity .7s, transform .7s;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    @keyframes float {
+      0%, 100% { translate: 0 0; }
+      50% { translate: 0 -10px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation: none !important;
+        transition: none !important;
+      }
+      .reveal { opacity: 1; transform: none; }
+    }
+
+    @media (max-width: 850px) {
+      .nav { flex-wrap: wrap; padding: 12px 0; }
+      .nav-links { order: 3; width: 100%; justify-content: center; gap: 17px; flex-wrap: wrap; }
+      .nav > .btn { padding: 8px 12px; }
+      .hero { padding-top: 55px; }
+      .hero-grid, .about-grid { grid-template-columns: 1fr; gap: 30px; }
+      .visual { order: -1; min-height: 270px; }
+      .code-window { max-width: 520px; }
+      .cards { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 540px) {
+      .container { width: 92%; }
+      .brand { font-size: 13px; }
+      .logo { width: 40px; height: 40px; }
+      .nav-links { font-size: 12px; gap: 12px; }
+      .hero { padding: 35px 0 55px; }
+      h1 { font-size: 35px; letter-spacing: -.8px; }
+      .hero p { font-size: 14px; }
+      .visual { min-height: 230px; }
+      .code-window { padding: 14px; }
+      .code { font-size: 11px; }
+      .cards { grid-template-columns: 1fr; }
+      section { padding: 55px 0; }
+      .mini-stats { gap: 7px; }
+      .mini-stat span { font-size: 10px; }
+      .contact-box h2 { font-size: 24px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="nav container" aria-label="منوی اصلی">
+      <a class="brand" href="#home" aria-label="صفحه اصلی رادوین هاشپور">
+        <span class="logo">RH</span>
+        <span>
+          رادوین هاشپور
+          <small>طراح و توسعه‌دهنده وب</small>
+        </span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#home">خانه</a>
+        <a href="#services">خدمات</a>
+        <a href="#projects">نمونه‌کارها</a>
+        <a href="#about">درباره من</a>
+        <a href="#contact">تماس</a>
+      </div>
+
+      <a class="btn btn-primary" href="#contact">شروع همکاری ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">طراحی · توسعه · سئو</span>
+
+          <h1>
+            رادوین هاشپور؛
+            <span class="gradient-text">طراحی سایت مدرن و حرفه‌ای</span>
+          </h1>
+
+          <p>
+            به وب‌سایت رسمی رادوین هاشپور خوش آمدید.
+            اینجا درباره طراحی وب‌سایت، توسعه فرانت‌اند،
+            تجربه کاربری و بهینه‌سازی فنی برای موتورهای جستجو
+            بیشتر آشنا می‌شوید.
+          </p>
+
+          <div class="actions">
+            <a class="btn btn-primary" href="#projects">مشاهده نمونه‌کارها ←</a>
+            <a class="btn btn-outline" href="#contact">ارتباط با من</a>
+          </div>
+
+          <div class="mini-stats">
+            <div class="mini-stat">
+              <strong>Responsive</strong>
+              <span>سازگار با موبایل</span>
+            </div>
+            <div class="mini-stat">
+              <strong>SEO</strong>
+              <span>سئوی فنی</span>
+            </div>
+            <div class="mini-stat">
+              <strong>Modern UI</strong>
+              <span>رابط کاربری مدرن</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="visual" aria-label="تصویر گرافیکی کدنویسی و طراحی وب">
+          <div class="orb"></div>
+          <div class="code-window">
+            <div class="window-bar">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="window-title">radvin-portfolio.html</span>
+            </div>
+            <pre class="code"><span class="p">&lt;!DOCTYPE html&gt;</span>
+<span class="c">&lt;html lang="fa" dir="rtl"&gt;</span>
+  &lt;head&gt;
+    &lt;title&gt;رادوین هاشپور&lt;/title&gt;
+    &lt;meta name="description"
+      content="طراحی سایت حرفه‌ای"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    <span class="p">&lt;h1&gt;</span>ایده‌ها را به وب تبدیل کن<span class="p">&lt;/h1&gt;</span>
+    <span class="c">&lt;!-- شروع یک پروژه جدید --&gt;</span>
+  &lt;/body&gt;
+<span class="c">&lt;/html&gt;</span></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">خدمات من</span>
+          <h2>خدمات طراحی سایت و توسعه وب</h2>
+          <p>
+            راهکارهایی برای ساخت تجربه‌های دیجیتال کاربردی،
+            سریع و سازگار با نیازهای کسب‌وکار.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card reveal">
+            <div class="icon" aria-hidden="true">◈</div>
+            <h3>طراحی سایت</h3>
+            <p>
+              طراحی رابط کاربری مدرن برای وب‌سایت‌های شخصی،
+              شرکتی، فروشگاهی و صفحات معرفی خدمات.
+            </p>
+            <a href="#contact">اطلاعات بیشتر ←</a>
+          </article>
+
+          <article class="card reveal">
+            <div class="icon" aria-hidden="true">&lt;/&gt;</div>
+            <h3>توسعه فرانت‌اند</h3>
+            <p>
+              پیاده‌سازی رابط‌های وب با HTML، CSS و JavaScript
+              با توجه به دسترس‌پذیری و نمایش صحیح در موبایل.
+            </p>
+            <a href="#contact">اطلاعات بیشتر ←</a>
+          </article>
+
+          <article class="card reveal">
+            <div class="icon" aria-hidden="true">↗</div>
+            <h3>بهینه‌سازی سئو</h3>
+            <p>
+              بهبود ساختار صفحات، عنوان‌ها، توضیحات،
+              لینک‌های داخلی و قابلیت خزش موتورهای جستجو.
+            </p>
+            <a href="#contact">اطلاعات بیشتر ←</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">پروژه‌ها</span>
+          <h2>نمونه‌کارهای طراحی سایت</h2>
+          <p>
+            چند دسته برای معرفی پروژه‌ها و کارهای آینده.
+            پس از انجام پروژه‌های واقعی، تصاویر و لینک آن‌ها
+            را در این قسمت قرار بده.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card project-card reveal">
+            <span class="project-label">01 / فروشگاهی</span>
+            <div>
+              <h3>طراحی فروشگاه اینترنتی</h3>
+              <p>معرفی محصولات، دسته‌بندی و تجربه خرید کاربرپسند.</p>
+            </div>
+          </article>
+
+          <article class="card project-card reveal">
+            <span class="project-label">02 / شرکتی</span>
+            <div>
+              <h3>وب‌سایت معرفی کسب‌وکار</h3>
+              <p>معرفی خدمات، اطلاعات تماس و هویت دیجیتال برند.</p>
+            </div>
+          </article>
+
+          <article class="card project-card reveal">
+            <span class="project-label">03 / شخصی</span>
+            <div>
+              <h3>وب‌سایت نمونه‌کار شخصی</h3>
+              <p>نمایش مهارت‌ها، معرفی تخصص و دسترسی به پروژه‌ها.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container about-grid">
+        <div class="about-panel reveal">
+          <span class="eyebrow">درباره من</span>
+          <h3>رادوین هاشپور</h3>
+          <p>
+            طراح و توسعه‌دهنده وب با تمرکز بر ساخت وب‌سایت‌های
+            مدرن، ساختارمند و کاربرپسند.
+          </p>
+          <div class="tags">
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">SEO</span>
+            <span class="tag">Responsive Design</span>
+          </div>
+        </div>
+
+        <div class="about-copy reveal">
+          <h2>طراحی سایت با تمرکز بر کیفیت</h2>
+          <p>
+            یک وب‌سایت خوب فقط ظاهر زیبا ندارد؛ محتوا باید
+            برای بازدیدکننده مفید باشد، ساختار صفحات قابل فهم
+            باشد و سایت در دستگاه‌های مختلف به‌درستی کار کند.
+          </p>
+          <p>
+            هدف این وب‌سایت معرفی رادوین هاشپور و ارائه اطلاعات
+            درباره طراحی سایت، توسعه وب و سئوی فنی است.
+          </p>
+          <a class="btn btn-outline" href="#contact">ارتباط و همکاری ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="contact-box reveal">
+          <span class="eyebrow">ارتباط با من</span>
+          <h2>برای پروژه بعدی آماده‌ای؟</h2>
+          <p>
+            برای افزودن راه ارتباطی مستقیم، شناسه شبکه اجتماعی
+            یا ایمیل خودت را در کد قرار بده.
+          </p>
+          <!-- لینک واقعی تماس را پس از مشخص شدن اطلاعات اضافه کن -->
+          <a class="btn btn-primary" href="mailto:YOUR-EMAIL@example.com">
+            ارسال ایمیل ↗
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year">2026</span> رادوین هاشپور</span>
+      <span>طراحی سایت · توسعه وب · سئوی فنی</span>
+      <a href="#home">بازگشت به بالا ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    const observer = "IntersectionObserver" in window
+      ? new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 })
+      : null;
+
+    document.querySelectorAll(".reveal").forEach(element => {
+      if (observer) {
+        observer.observe(element);
+      } else {
+        element.classList.add("visible");
+      }
+    });
+  </script>
+</body>
+</html>
